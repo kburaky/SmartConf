@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<h:body> 
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<center>
+		
+		<h:form id="loginForm" action="#{loginBeanEditor.loginProject()}">
+    
+            <p:growl id="msg" showDetail="true" life="3000" />
+            <p:panel header="Editor Panel Giris" style="width: 360px;">
+ 
+                <h:panelGrid id="loginPanel" columns="2">
+ 
+                    <h:outputText value="Kullanıcı Adı" />
+ 
+                    <p:inputText id="username" value="#{loginBeanEditor.uname}" ></p:inputText>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:message for="username" ></p:message>
+ 
+                    <h:outputText value="Sifre" />
+ 
+                    <p:password id="password" value="#{loginBeanEditor.password}"  feedback="false"></p:password>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:message for="password"></p:message>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:commandButton action="#{loginBeanEditor.loginProject}" value="Giris" update="loginForm" ajax="true"></p:commandButton>
+ 
+                </h:panelGrid>
+ 
+            </p:panel>
+ 
+        </h:form>
+</center>
+
+
+</h:body> 
+</html>

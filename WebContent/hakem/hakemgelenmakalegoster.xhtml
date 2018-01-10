@@ -1,0 +1,366 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+
+<h:head>
+	<f:facet name="first">
+		<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+		<title>Hakem Panel - SmartConf</title>
+	</f:facet>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- MetisMenu CSS -->
+	<link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet" />
+
+	<!-- Timeline CSS -->
+	<link href="css/plugins/timeline.css" rel="stylesheet" />
+
+	<!-- Custom CSS -->
+	<link href="css/sb-admin-2.css" rel="stylesheet" />
+
+	<!-- Morris Charts CSS -->
+	<link href="css/plugins/morris.css" rel="stylesheet" />
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+
+</h:head>
+
+
+<h:body>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="90" resizable="false"
+			closable="true" collapsible="true">
+
+
+			<!-- ÜST MENU BASLANGIC -->
+			<p:layout style="min-width:400px;min-height:200px;">
+
+				<p:layoutUnit position="west" resizable="true" size="245"
+					minSize="40">
+					<p:graphicImage value="/editor/images/indir.jpg"
+						style="width:245px;height:60px;" />
+				</p:layoutUnit>
+
+
+
+				<p:layoutUnit position="center">
+
+					<h:form>
+						<p:growl id="messages" />
+
+						<p:menubar style="height:45px">
+							
+							<f:facet name="options">
+								
+								<p:commandButton value="Oturumu Kapat" action="logout"
+									icon="ui-icon-extlink" />
+									
+							</f:facet>
+							
+						</p:menubar>
+						
+					</h:form>
+					
+				</p:layoutUnit>
+				
+			</p:layout>
+
+
+
+
+		</p:layoutUnit>
+
+		<!-- ÜST MENU BİTİSİ -->
+
+
+
+		
+
+		<p:layoutUnit position="west" size="250">
+				<h:form>
+				<p:growl autoUpdate="true" />
+
+				<p:panelMenu style="width:250px">
+
+
+					<p:submenu label="Menu">
+						<p:menuitem value="Anasayfa" action="homehakem"
+							icon="ui-icon-disk" />
+					</p:submenu>
+
+
+					<p:submenu label="Hakem">
+						<p:menuitem value="Hakem Bilgileri göster" action="hakemgoster"
+							icon="ui-icon-disk" />
+					</p:submenu>
+						
+				
+				
+					<p:submenu label="Makale İslemleri">
+						<p:menuitem value=" Gelen Makaleleri Göster" action="hakemGelenMakaleGoster"
+							icon="ui-icon-disk" />
+						
+						
+					</p:submenu>
+
+					
+					
+					<p:separator />
+
+					
+
+					
+
+
+				</p:panelMenu>
+			</h:form>
+
+
+
+		</p:layoutUnit>
+
+
+
+
+		<p:layoutUnit position="center">
+
+			<!-- ORTA BÖLÜM -->
+
+			<div style="height: 1100px">
+
+
+
+<h:form id="form">
+             
+    <p:growl id="msgs" showDetail="true" />
+ 
+    <p:scrollPanel style="width:1100px;height:300px">
+    <p:tabView>
+        
+        <p:tab title="Gelen Makale Goster">
+        
+        
+            <p:dataTable value="#{hakemMakaleBean.getMakaleList()}" var="m" border="1">
+			 		
+			 		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				ID
+						</f:facet>
+		    				
+		    			<h:outputText value="#{m.makaleid}"  />
+		    			
+		    		
+		    		</p:column>
+			 		
+			 		
+			 		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Makale Ozet
+						</f:facet>
+		    				
+		    			<h:outputText value="#{m.makaleozet}"  />  		
+		    		</p:column>
+			 		
+			 
+		    		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Makale Baslik
+						</f:facet>
+		    				
+		    			<h:outputText value="#{m.makalebaslik}"  />	
+		    		</p:column>
+		    		
+		    		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Anahtar Kelimeler
+						</f:facet>
+		    				
+		    			<h:outputText value="#{m.makaleanahtarkelimeler}"  />  		
+		    		</p:column>
+		 
+		 			
+		    		
+		    		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				İcerik Tipi
+						</f:facet>
+		    				
+		    			<h:outputText value="#{m.makaleiceriktipi}"  />		
+		    		</p:column>
+		 			
+		 			
+		    		
+		    		
+		
+    			</p:dataTable> 
+        </p:tab>
+        
+        
+        
+        <p:tab title="Gelen Dosya Goster">
+           <p:dataTable value="#{hakemDosyaBean.getDosyaList()}" var="d" border="1">
+			 		
+			 		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				ID
+						</f:facet>
+		    				
+		    			<h:outputText value="#{d.dosyaid}"  />
+		    			
+		    		</p:column>
+			 		
+			 		
+			 		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Yazar Kul Adi
+						</f:facet>
+		    				
+		    			<h:outputText value="#{d.yazarkullaniciadi}"  />
+		    			
+		    		</p:column>
+			 		
+			 
+		    		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Dosya Adi
+						</f:facet>
+		    		
+		
+		    		<h:commandButton  value="#{d.dosyaadi}" action="#{downloadBean.downLoad()}"/>  
+		
+		
+		    		</p:column>
+		    		
+		    		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Tarih
+						</f:facet>
+		    				
+		    			<h:outputText value="#{d.tarih}"  />
+		    			
+		    		</p:column>
+		 
+    			</p:dataTable> 
+        </p:tab>
+  
+    </p:tabView>
+    </p:scrollPanel>
+</h:form>
+	 <br/>
+	 
+	 
+	 
+	 
+	 
+	 <h:form id="adf">
+            <p:growl id="grl" showDetail="true"/>
+            <p:fieldset legend="Sonucu Gönder" id="fld" style="font-size: 9pt;">
+             
+              <p:panelGrid columns="6">
+                
+                <p:column>
+                  <p:outputLabel value="Yazar Bilgisi :" /><br/>
+                  
+                  <p:selectOneMenu value="#{atama.kullaniciid}" required="true" requiredMessage="Field must not empty">
+                    <f:selectItem itemLabel="---Seciniz---" itemValue=""/>
+                    <f:selectItems value="#{yonlendirme.yazarVerileri}" var="aac" itemLabel="#{aac.kullaniciadi}" itemValue="#{aac.kullaniciid}"/>
+                  </p:selectOneMenu> 
+                                                     
+                </p:column>
+                
+                
+                <p:column>
+                  <p:outputLabel value="Makale Bilgisi :" /><br/>
+                  
+                  <p:selectOneMenu value="#{atama.makaleid}" required="true" requiredMessage="Field must not empty">
+                    <f:selectItem itemLabel="---Seciniz---" itemValue=""/>
+                    <f:selectItems value="#{yonlendirme.makaleVerileri}" var="aac" itemLabel="#{aac.makalebaslik}" itemValue="#{aac.makaleid}"/>
+                  </p:selectOneMenu> 
+                                                     
+                </p:column>
+                
+                <p:column>
+                  <p:outputLabel value="Hakem Bilgisi :" /><br/>
+                  
+                  <p:selectOneMenu value="#{atama.hakemid}" required="true" requiredMessage="Field must not empty">
+                    <f:selectItem itemLabel="---Seciniz---" itemValue=""/>
+                    <f:selectItems value="#{yonlendirme.hakemVerileri}" var="aac" itemLabel="#{aac.hakemadi}" itemValue="#{aac.hakemid}"/>
+                  </p:selectOneMenu> 
+                                                     
+                </p:column>
+                
+                <p:column>
+                  <p:outputLabel value="Dosya Bilgisi :" /><br/>    
+                  <p:selectOneMenu value="#{atama.dosyaid}" required="true" requiredMessage="Field must not empty">
+                    <f:selectItem itemLabel="---Seciniz---" itemValue=""/>
+                    <f:selectItems value="#{yonlendirme.dosyaVerileri}" var="aac" itemLabel="#{aac.dosyaadi}" itemValue="#{aac.dosyaid}"/>
+                  </p:selectOneMenu>                                        
+                </p:column>
+                
+                    
+                <p:column>
+                  <p:outputLabel value="Makale Durumu :" /><br/> 
+                  <!--  <p:inputText value="#{atama.durum}"  />  -->
+                  <p:selectOneMenu value="#{atama.durum}" required="true" requiredMessage="Field must not empty">
+                    <f:selectItem itemLabel="---Seciniz---" itemValue="Seciniz"/>
+                    <f:selectItem itemLabel="Kabul Edildi" itemValue="Kabul Edildi"/>
+                    <f:selectItem itemLabel="Reddedildi" itemValue="Reddedildi"/>
+                    <f:selectItem itemLabel="Revizyon" itemValue="Revizyon"/>
+                  </p:selectOneMenu>  
+                  
+                  
+                </p:column>
+                 
+                 <p:column>
+                  <p:outputLabel value="Makale Nedeni:" /><br/> 
+                  <!--  <p:inputText value="#{atama.nedeni}"  /> -->
+                  
+                  <p:inputTextarea value="#{atama.nedeni}"  />
+                  
+                  
+                  
+                </p:column> 
+                 
+                                               
+               
+                <p:column>
+                  <p:outputLabel value=""/>
+                  <p:commandButton value="Atamalari Yolla" action="#{atama.geridonus()}"  icon="ui-icon-disk" style="font-size: 8pt;"
+                  oncomplete="PF('dlg').show()"/>
+                </p:column>
+                
+                
+              </p:panelGrid>
+              
+              <p:dialog header="Geri Donus Yollama" widgetVar="dlg" >
+                	<h:panelGrid id="display"  columns="1" cellpadding="4">
+                    	<h:outputText value="#{atama.showBasarili()}" />
+
+                	</h:panelGrid>
+            	</p:dialog>
+            </p:fieldset>                           
+          </h:form>
+	 
+
+			</div>
+			<!-- ORTA BÖLÜM  sonu -->
+
+
+		</p:layoutUnit>
+
+
+	</p:layout>
+
+
+</h:body>
+</html>

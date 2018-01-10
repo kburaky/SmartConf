@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:#editor#login.xhtml"
+  PATH="/editor/login.xhtml" SHAPE="32,17,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#yazar#login.xhtml" PATH="/yazar/login.xhtml"
+  SHAPE="736,241,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#hakem#login.xhtml" PATH="/hakem/login.xhtml"
+  SHAPE="736,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:index.xhtml" PATH="index.xhtml"
+  SHAPE="496,17,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#yazar#home.xhtml" PATH="/yazar/home.xhtml"
+  SHAPE="240,241,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#hakem#home.xhtml" PATH="/hakem/home.xhtml"
+  SHAPE="944,17,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#home.xhtml" PATH="/editor/home.xhtml"
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#konferansEkle.xhtml"
+  PATH="/editor/konferansEkle.xhtml" SHAPE="496,449,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#konferansGoster.xhtml"
+  PATH="/editor/konferansGoster.xhtml" SHAPE="496,337,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#editorGoster.xhtml"
+  PATH="/editor/editorGoster.xhtml" SHAPE="496,225,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,1361,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="homeeditor::#editor#home.xhtml"
+    NAME="output" PATH="/editor/home.xhtml"
+    TARGET="rules:#editor#home.xhtml" TITLE="homeeditor" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,1137,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="homeyazar::#yazar#home.xhtml" NAME="output"
+    PATH="/yazar/home.xhtml" TARGET="rules:#yazar#home.xhtml"
+    TITLE="homeyazar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::2" SHAPE="656,1265,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::2" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="homehakem::#hakem#home.xhtml" NAME="output"
+    PATH="/hakem/home.xhtml" TARGET="rules:#hakem#home.xhtml"
+    TITLE="homehakem" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::3" SHAPE="32,129,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::3" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="hakemgoster::#hakem#hakemgoster.xhtml"
+    NAME="output" PATH="/hakem/hakemgoster.xhtml"
+    TARGET="rules:#hakem#hakemgoster.xhtml" TITLE="hakemgoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::4" SHAPE="448,689,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::4" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="hakemGelenMakaleGoster::#hakem#hakemgelenmakalegoster.xhtml"
+    NAME="output" PATH="/hakem/hakemgelenmakalegoster.xhtml"
+    TARGET="rules:#hakem#hakemgelenmakalegoster.xhtml"
+    TITLE="hakemGelenMakaleGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::5" SHAPE="448,577,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::5" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="editorgiris::#editor#login.xhtml"
+    NAME="output" PATH="/editor/login.xhtml"
+    TARGET="rules:#editor#login.xhtml" TITLE="editorgiris" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::6" SHAPE="240,817,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::6" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="hakemgiris::#hakem#login.xhtml"
+    NAME="output" PATH="/hakem/login.xhtml"
+    TARGET="rules:#hakem#login.xhtml" TITLE="hakemgiris" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::7" SHAPE="240,929,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::7" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="yazargiris::#yazar#login.xhtml"
+    NAME="output" PATH="/yazar/login.xhtml"
+    TARGET="rules:#yazar#login.xhtml" TITLE="yazargiris" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::8" SHAPE="240,1041,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::8" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="makaleDurum::#yazar#makaleDurum.xhtml"
+    NAME="output" PATH="/yazar/makaleDurum.xhtml"
+    TARGET="rules:#yazar#makaleDurum.xhtml" TITLE="makaleDurum" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::9" SHAPE="240,1601,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::9" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logoutyazar::index.xhtml" NAME="output"
+    PATH="index.xhtml" TARGET="rules:index.xhtml" TITLE="logoutyazar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::10" SHAPE="240,1489,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::10" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logouthakem::index.xhtml" NAME="output"
+    PATH="index.xhtml" TARGET="rules:index.xhtml" TITLE="logouthakem" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::11" SHAPE="240,1713,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::11" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="logout::index.xhtml" NAME="output"
+    PATH="index.xhtml" TARGET="rules:index.xhtml" TITLE="logout" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::12" SHAPE="240,1825,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::12" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="editorGoster::#editor#editorGoster.xhtml"
+    NAME="output" PATH="/editor/editorGoster.xhtml"
+    TARGET="rules:#editor#editorGoster.xhtml" TITLE="editorGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#yazar#makaleGonder.xhtml"
+  PATH="/yazar/makaleGonder.xhtml" SHAPE="448,1809,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::13" SHAPE="240,1937,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::13" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editoryazarGoster::#editor#editoryazarGoster.xhtml"
+    NAME="output" PATH="/editor/editoryazarGoster.xhtml"
+    TARGET="rules:#editor#editoryazarGoster.xhtml"
+    TITLE="editoryazarGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#yazar#makaleGoster.xhtml"
+  PATH="/yazar/makaleGoster.xhtml" SHAPE="448,1921,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::14" SHAPE="240,2049,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::14" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editormakaleDurum::#editor#editormakaleDurum.xhtml"
+    NAME="output" PATH="/editor/editormakaleDurum.xhtml"
+    TARGET="rules:#editor#editormakaleDurum.xhtml"
+    TITLE="editormakaleDurum" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::15" SHAPE="240,2161,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::15" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editoryazarRaporla::#editor#editoryazarRaporla.xhtml"
+    NAME="output" PATH="/editor/editoryazarRaporla.xhtml"
+    TARGET="rules:#editor#editoryazarRaporla.xhtml"
+    TITLE="editoryazarRaporla" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#yazar#yazarGoster.xhtml"
+  PATH="/yazar/yazarGoster.xhtml" SHAPE="448,2257,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#yazar#yazarRaporla.xhtml"
+  PATH="/yazar/yazarRaporla.xhtml" SHAPE="448,2369,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::16" SHAPE="240,2385,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::16" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editorhakemGoster::#editor#editorhakemGoster.xhtml"
+    NAME="output" PATH="/editor/editorhakemGoster.xhtml"
+    TARGET="rules:#editor#editorhakemGoster.xhtml"
+    TITLE="editorhakemGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::17" SHAPE="240,2497,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::17" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editorhakemRaporla::#editor#editorhakemRaporla.xhtml"
+    NAME="output" PATH="/editor/editorhakemRaporla.xhtml"
+    TARGET="rules:#editor#editorhakemRaporla.xhtml"
+    TITLE="editorhakemRaporla" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::18" SHAPE="240,2609,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::18" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editormakaleGoster::#editor#editormakaleGoster.xhtml"
+    NAME="output" PATH="/editor/editormakaleGoster.xhtml"
+    TARGET="rules:#editor#editormakaleGoster.xhtml"
+    TITLE="editormakaleGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::19" SHAPE="240,2721,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::19" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="editormakaleRaporla::#editor#editormakaleRaporla.xhtml"
+    NAME="output" PATH="/editor/editormakaleRaporla.xhtml"
+    TARGET="rules:#editor#editormakaleRaporla.xhtml"
+    TITLE="editormakaleRaporla" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::20" SHAPE="240,2833,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::20" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="konferansGoster::#editor#konferansGoster.xhtml" NAME="output"
+    PATH="/editor/konferansGoster.xhtml"
+    TARGET="rules:#editor#konferansGoster.xhtml" TITLE="konferansGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#editor#editormakaleGoster.xhtml"
+  PATH="/editor/editormakaleGoster.xhtml" SHAPE="448,2705,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#editorhakemRaporla.xhtml"
+  PATH="/editor/editorhakemRaporla.xhtml" SHAPE="448,2593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#editorhakemGoster.xhtml"
+  PATH="/editor/editorhakemGoster.xhtml" SHAPE="448,2145,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#editoryazarRaporla.xhtml"
+  PATH="/editor/editoryazarRaporla.xhtml" SHAPE="448,2033,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#editor#editoryazarGoster.xhtml"
+  PATH="/editor/editoryazarGoster.xhtml" SHAPE="448,1697,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::21" SHAPE="240,2945,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::21" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="konferansRaporla::#editor#konferansRaporla.xhtml" NAME="output"
+    PATH="/editor/konferansRaporla.xhtml"
+    TARGET="rules:#editor#konferansRaporla.xhtml"
+    TITLE="konferansRaporla" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#editor#editormakaleRaporla.xhtml"
+  PATH="/editor/editormakaleRaporla.xhtml" SHAPE="448,2817,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::22" SHAPE="240,3057,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::22" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="konferansEkle::#editor#konferansEkle.xhtml"
+    NAME="output" PATH="/editor/konferansEkle.xhtml"
+    TARGET="rules:#editor#konferansEkle.xhtml" TITLE="konferansEkle" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#editor#konferansRaporla.xhtml"
+  PATH="/editor/konferansRaporla.xhtml" SHAPE="448,3153,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::23" SHAPE="240,3169,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::23" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="makaleGonder::#yazar#makaleGonder.xhtml"
+    NAME="output" PATH="/yazar/makaleGonder.xhtml"
+    TARGET="rules:#yazar#makaleGonder.xhtml" TITLE="makaleGonder" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#yazar#makaleBilgileri.xhtml"
+  PATH="/yazar/makaleBilgileri.xhtml" SHAPE="448,3265,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::24" SHAPE="240,3281,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::24" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="makaleBilgileri::#yazar#makaleBilgileri.xhtml" NAME="output"
+    PATH="/yazar/makaleBilgileri.xhtml"
+    TARGET="rules:#yazar#makaleBilgileri.xhtml" TITLE="makaleBilgileri" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#yazar#makaleIslemlerim.xhtml"
+  PATH="/yazar/makaleIslemlerim.xhtml" SHAPE="448,3377,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::25" SHAPE="240,3393,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::25" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="makaleGoster::#yazar#makaleGoster.xhtml"
+    NAME="output" PATH="/yazar/makaleGoster.xhtml"
+    TARGET="rules:#yazar#makaleGoster.xhtml" TITLE="makaleGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#hakem#hakemgoster.xhtml"
+  PATH="/hakem/hakemgoster.xhtml" SHAPE="240,2273,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::26" SHAPE="240,3505,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::26" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="kullanicilariGoster::#yazar#yazarGoster.xhtml" NAME="output"
+    PATH="/yazar/yazarGoster.xhtml"
+    TARGET="rules:#yazar#yazarGoster.xhtml" TITLE="kullanicilariGoster" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#hakem#hakemgelenmakalegoster.xhtml"
+  PATH="/hakem/hakemgelenmakalegoster.xhtml" SHAPE="656,2385,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::27" SHAPE="240,3617,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::27" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="makaleStep::#yazar#makaleIslemlerim.xhtml"
+    NAME="output" PATH="/yazar/makaleIslemlerim.xhtml"
+    TARGET="rules:#yazar#makaleIslemlerim.xhtml" TITLE="makaleStep" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#yazar#makaleDurum.xhtml"
+  PATH="/yazar/makaleDurum.xhtml" SHAPE="448,2481,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules::28" SHAPE="240,3729,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::28" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="kullanicilariRaporla::#yazar#yazarRaporla.xhtml" NAME="output"
+    PATH="/yazar/yazarRaporla.xhtml"
+    TARGET="rules:#yazar#yazarRaporla.xhtml"
+    TITLE="kullanicilariRaporla" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#editor#editormakaleDurum.xhtml"
+  PATH="/editor/editormakaleDurum.xhtml" SHAPE="448,3489,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>

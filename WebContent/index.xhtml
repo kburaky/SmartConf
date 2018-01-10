@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<h:body> 
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<center>
+		
+		<h:form id="loginForm">
+    
+            <p:growl id="msg" showDetail="true" life="3000" />
+            <p:panel header="SmartConf Giris" style="width: 360px;">
+ 
+                <h:panelGrid id="loginPanel" columns="2">
+
+
+ 					<h:commandLink action="editorgiris">
+                    	<p:graphicImage value="/resimler/editor.jpg"
+						style="width:245px;height:60px;" />
+					</h:commandLink>
+						
+                    <p:spacer></p:spacer>
+                    
+                    <h:commandLink action="yazargiris">
+ 					<p:graphicImage value="/resimler/yazar.jpg"
+						style="width:245px;height:60px;" />
+					</h:commandLink>
+					
+                    <p:spacer></p:spacer>
+                    
+                    <h:commandLink action="hakemgiris">
+ 					<p:graphicImage value="/resimler/hakem.jpg"
+						style="width:245px;height:60px;" />
+ 					</h:commandLink>
+                    
+                    
+                </h:panelGrid>
+            </p:panel>
+ 
+        </h:form>
+</center>
+
+
+</h:body> 
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+		<title>Yazar Panel - SmartConf</title>
+	</f:facet>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- MetisMenu CSS -->
+	<link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet" />
+
+	<!-- Timeline CSS -->
+	<link href="css/plugins/timeline.css" rel="stylesheet" />
+
+	<!-- Custom CSS -->
+	<link href="css/sb-admin-2.css" rel="stylesheet" />
+
+	<!-- Morris Charts CSS -->
+	<link href="css/plugins/morris.css" rel="stylesheet" />
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+
+</h:head>
+
+
+
+<h:body>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="90" resizable="false"
+			closable="true" collapsible="true">
+
+
+			<!-- ÜST MENU BASLANGIC -->
+			<p:layout style="min-width:400px;min-height:200px;">
+
+				<p:layoutUnit position="west" resizable="false" size="245"
+					minSize="40">
+					<p:graphicImage value="/editor/images/indir.jpg"
+						style="width:245px;height:60px;" />
+				</p:layoutUnit>
+
+
+
+			<p:layoutUnit position="center">
+
+					<h:form>
+						<p:growl id="messages" />
+
+						<p:menubar style="height:45px">
+							
+							<f:facet name="options">
+								
+								<p:commandButton value="Oturumu Kapat" action="logoutyazar"
+									icon="ui-icon-extlink" />		
+							</f:facet>
+							
+						</p:menubar>
+						
+					</h:form>
+					
+			</p:layoutUnit>
+				
+			</p:layout>
+
+
+
+
+		</p:layoutUnit>
+
+		<!-- ÜST MENU BİTİSİ -->
+
+
+
+		<!--  	<p:layoutUnit position="south" size="100" closable="true"
+			collapsible="true">
+                    ALT
+                </p:layoutUnit>  -->
+
+		<p:layoutUnit position="west" size="250">
+			<h:form>
+				<p:growl autoUpdate="true" />
+
+				<p:panelMenu style="width:250px">
+
+
+					<p:submenu label="Menu">
+						<p:menuitem value="Anasayfa" action="homeyazar"
+							icon="ui-icon-home" />
+					</p:submenu>
+
+
+				
+					<p:submenu label="Yazarlar">
+						<p:menuitem value="Bilgilerimi Göster" action="kullanicilariGoster"
+							icon="ui-icon-person" />
+						
+						
+					</p:submenu>
+
+					
+					
+					<p:submenu label="Makaleler">
+						<p:menuitem value="Makale İşlemlerim"  action="makaleStep"
+						   icon="ui-icon-folder-collapsed" />
+						<p:menuitem value="Makalelerimi Göster"  action="makaleGoster"
+						   icon="ui-icon-note" />
+						
+						<p:menuitem value="Makale Durumum"  action="makaleDurum"
+						   icon="ui-icon-mail-open" />
+						
+					</p:submenu>
+					<p:separator />
+
+					
+
+					
+
+
+				</p:panelMenu>
+			</h:form>
+
+
+
+		</p:layoutUnit>
+
+
+
+		<p:layoutUnit position="center">
+
+
+			<!-- ORTA BÖLÜM -->
+
+			<div style="height: 1100px">
+
+				<p>Hosgeldin, #{loginBeanYazar.uname}</p>
+				
+
+	 <p:stack icon="/resimler/stack.png" expanded="true">
+	 
+		    <p:menuitem  value="Anasayfa" icon="/resimler/home.png"  url="home.jsf"/>
+		    <p:menuitem value="Bilgilerim" icon="/resimler/bilgilerim.png" url="yazarGoster.jsf"/>
+		    <p:menuitem value="Makale İslemlerim" icon="/resimler/makalebilgiler.png" url="makaleBilgileri.jsf" />
+		    <p:menuitem value="Dosya İslemlerim" icon="/resimler/dosyabilgiler.png"  url="makaleGonder.jsf"/>
+		    <p:menuitem value="Makalelerim" icon="/resimler/makalegoster.png" url="makaleGoster.jsf" />
+	 
+	 </p:stack>
+
+
+			</div>
+			<!-- ORTA BÖLÜM  SONUUUUU -->
+
+
+		</p:layoutUnit>
+
+
+	</p:layout>
+
+
+</h:body>
+</html>

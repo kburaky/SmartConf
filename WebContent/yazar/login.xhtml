@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"> 
+
+<h:head></h:head> 
+<h:body> 
+		<br/><br/><br/><br/><br/><br/><br/><br/>
+		<center>
+		
+		<h:form id="loginForm" action="#{loginBeanYazar.loginProject()}">
+    
+            <p:growl id="msg" showDetail="true" life="3000" />
+            <p:panel header="Yazar Panel Giris" style="width: 360px;">
+ 
+                <h:panelGrid id="loginPanel" columns="2">
+ 
+                    <h:outputText value="Kullanıcı Adı" />
+ 
+                    <p:inputText id="username" value="#{loginBeanYazar.uname}" ></p:inputText>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:message for="username" ></p:message>
+ 
+                    <h:outputText value="Sifre" />
+ 
+                    <p:password id="password" value="#{loginBeanYazar.password}"  feedback="false"></p:password>
+ 
+                    <p:spacer></p:spacer>
+ 
+                    <p:message for="password"></p:message>
+ 
+ 					
+                    <p:commandButton action="#{loginBeanYazar.loginProject}" value="Giris" update="loginForm" ajax="true"></p:commandButton>
+                      
+ 					<p:commandButton value="Yeni Kayıt" type="button" onclick="PF('dlg1').show();" > </p:commandButton>
+                </h:panelGrid>
+ 					
+ 				<p:dialog header="Yeni Yazar Kaydı" widgetVar="dlg1" minHeight="40">
+    				 <h:panelGrid columns="2" cellpadding="5" value="#{yazarBean.getUserList()}" >
+                    
+                  
+                    <h:outputText value="Kullanici Adi : " />
+                    <p:inputText value="#{yazar.kullaniciadi}" />
+                
+                
+                	<h:outputText value="Kullanici Sifre : " />
+                	<p:inputText value="#{yazar.kullanicisifre}" />
+                
+                
+                	<h:outputText value="İlk İsim : " />
+                    <p:inputText value="#{yazar.kullaniciilkisim}" />
+                
+                
+                    <h:outputText value="İkinci İsim : " />
+                    <p:inputText value="#{yazar.kullaniciikinciisim}" />
+                   
+                   
+                    <h:outputText value="Soyisim : " />
+                    <p:inputText value="#{yazar.kullanicisoyisim}" />
+                   
+                    <h:outputText value="Uyelik : " />
+                    <p:inputText value="#{yazar.kullaniciuyelik}" /> 
+                    
+                    <h:outputText value="Telefon : "  />
+                    <p:inputMask id="phone" value="#{yazar.kullanicitelefon}" mask="(999) 999-9999"/>
+	               
+        
+        			<h:outputText value="E-mail : "  />
+	                <p:inputText  value="#{yazar.kullaniciemail}"/>
+	                
+	                <h:outputText value="Adres : "  />
+	                <p:inputText  value="#{yazar.kullaniciadres}"/>
+                    
+                    <h:outputText value="Uzamanlık Alanı : "  />
+	                <p:inputText  value="#{yazar.kullaniciuzmanlikalani}"/>
+                    
+                    
+				
+                   <p:commandButton value="Yazar OLustur" action="#{yazar.ekle2()}"
+                   update="display" oncomplete="PF('dlg').show()" />
+                    
+				
+					
+					
+                </h:panelGrid>
+				</p:dialog>
+ 					
+ 				<p:dialog header="Yazar Ekleme" widgetVar="dlg" >
+                	<h:panelGrid id="display" columns="1" cellpadding="4">
+                    	<h:outputText value="#{yazar.showBasarili()}" />
+
+                	</h:panelGrid>
+            	</p:dialog>
+ 
+ 
+ 
+ 
+            </p:panel>
+ 
+        </h:form>
+</center>
+
+
+</h:body> 
+</html>

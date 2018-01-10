@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+		<title>Editor Panel - SmartConf</title>
+	</f:facet>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- MetisMenu CSS -->
+	<link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet" />
+
+	<!-- Timeline CSS -->
+	<link href="css/plugins/timeline.css" rel="stylesheet" />
+
+	<!-- Custom CSS -->
+	<link href="css/sb-admin-2.css" rel="stylesheet" />
+
+	<!-- Morris Charts CSS -->
+	<link href="css/plugins/morris.css" rel="stylesheet" />
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+
+</h:head>
+
+
+<h:body>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="90" resizable="false"
+			closable="true" collapsible="true">
+
+
+			<!-- ÜST MENU BASLANGIC -->
+			<p:layout style="min-width:400px;min-height:200px;">
+
+				<p:layoutUnit position="west" resizable="true" size="245"
+					minSize="40">
+					<p:graphicImage value="/editor/images/indir.jpg"
+						style="width:245px;height:60px;" />
+				</p:layoutUnit>
+
+
+
+				<p:layoutUnit position="center">
+
+					<h:form>
+						<p:growl id="messages" />
+
+						<p:menubar style="height:45px">
+							
+							<f:facet name="options">
+								
+								<p:commandButton value="Oturumu Kapat" action="logout"
+									icon="ui-icon-extlink" />
+									
+							</f:facet>
+							
+						</p:menubar>
+						
+					</h:form>
+					
+				</p:layoutUnit>
+				
+			</p:layout>
+
+
+
+
+		</p:layoutUnit>
+
+		<!-- ÜST MENU BİTİSİ -->
+
+
+
+		<!--  	<p:layoutUnit position="south" size="100" closable="true"
+			collapsible="true">
+                    ALT
+                </p:layoutUnit>  -->
+
+		<p:layoutUnit position="west" size="250">
+			<h:form>
+				<p:growl autoUpdate="true" />
+
+				<p:panelMenu style="width:250px">
+
+
+					<p:submenu label="Menu">
+						<p:menuitem value="Anasayfa" action="homeeditor"
+							icon="ui-icon-home" />
+					</p:submenu>
+
+
+					<p:submenu label="Editor">
+						<p:menuitem value="Editor Bilgileri Göster" action="editorGoster"
+							icon="ui-icon-person" />
+					</p:submenu>
+						
+				
+				
+					<p:submenu label="Yazarlar">
+						<p:menuitem value="Yazarları Göster" action="editoryazarGoster"
+							icon="ui-icon-clipboard" />
+						
+						<p:menuitem value="Yazarları Raporla" action="editoryazarRaporla"
+							icon="ui-icon-print" />
+						
+					</p:submenu>
+
+					<p:submenu label="Hakemler">
+						<p:menuitem value="Hakemleri Göster"  action="editorhakemGoster"
+						   icon="ui-icon-clipboard" />
+						   <p:menuitem value="Hakemleri Raporla" action="editorhakemRaporla"
+						   icon="ui-icon-print" />	
+					</p:submenu>
+					
+					
+					<p:submenu label="Makaleler">
+						<p:menuitem value="Makaleleri Yönlendir"  action="editormakaleGoster"
+						   icon="ui-icon-link" />
+						<p:menuitem value="Makale Durumlari Bildir"  action="editormakaleDurum"
+						   icon="ui-icon-signal-diag" />
+						<p:menuitem value="Makaleleri Raporla" action="editormakaleRaporla"
+						   icon="ui-icon-print" />	
+					</p:submenu>
+					
+					<p:submenu label="Konferans">
+						
+						<p:menuitem value="Konferans Olustur"  action="konferansEkle"
+						   icon="ui-icon-plusthick" />
+						<p:menuitem value="Konferans Göster"  action="konferansGoster"
+						   icon="ui-icon-lightbulb" />
+						   <p:menuitem value="Konferans Raporla" action="konferansRaporla"
+						   icon="ui-icon-print" />	
+					</p:submenu>
+
+					<p:separator />
+
+					
+
+					
+
+
+				</p:panelMenu>
+			</h:form>
+
+
+
+		</p:layoutUnit>
+
+
+
+
+		<p:layoutUnit position="center">
+
+			<!-- ORTA BÖLÜM -->
+
+			<div style="height: 1100px">
+
+			
+				<h:form id="form">
+
+				
+
+
+				
+			 		
+			 		
+	<p:dataTable id="tbl" var="u" value="#{editormakalegosterBean.getUserList()}"
+						paginatorTemplate="{CurrentPageReport}  {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {Exporters}"
+						paginator="true" rows="10" style="margin-bottom:20px">
+			 		
+			 		<f:facet name="{Exporters}">
+							<h:commandLink>
+								<p:graphicImage value="/resources/images/excel.png" width="24" />
+								<p:dataExporter type="xls" target="tbl" fileName="cars" />
+							</h:commandLink>
+
+							<h:commandLink>
+								<p:graphicImage value="/resources/images/pdf.png" width="24" />
+								<p:dataExporter type="pdf" target="tbl" fileName="cars" />
+							</h:commandLink>
+
+							<h:commandLink>
+								<p:graphicImage value="/resources/images/csv.png" width="24" />
+								<p:dataExporter type="csv" target="tbl" fileName="cars" />
+							</h:commandLink>
+
+							<h:commandLink>
+								<p:graphicImage value="/resources/images/xml.png" width="24" />
+								<p:dataExporter type="xml" target="tbl" fileName="cars" />
+							</h:commandLink>
+					</f:facet>
+			 		
+			 		
+			 		
+			 		
+			 		
+			 
+			 		
+			 		<p:column>
+							<f:facet name="header">
+								<h:outputText value="ID" />
+							</f:facet>
+							<h:outputText value="#{u.makaleid}" />
+					</p:column>
+		    		
+		 			
+		 			<p:column>
+							<f:facet name="header">
+								<h:outputText value="Makale Ozet" />
+							</f:facet>
+							<h:outputText value="#{u.makaleozet}" />
+					</p:column>
+		    		
+		    		<p:column>
+							<f:facet name="header">
+								<h:outputText value="Makale Baslik" />
+							</f:facet>
+							<h:outputText value="#{u.makalebaslik}" />
+					</p:column>
+		    		
+		    		<p:column>
+							<f:facet name="header">
+								<h:outputText value="Makale Anahtar Kelimeler" />
+							</f:facet>
+							<h:outputText value="#{u.makaleanahtarkelimeler}" />
+					</p:column>
+		    		
+		    		<p:column>
+							<f:facet name="header">
+								<h:outputText value="Makale İcerik Tipi" />
+							</f:facet>
+							<h:outputText value="#{u.makaleiceriktipi}" />
+					</p:column>
+		    		
+		    		<p:column>
+							<f:facet name="header">
+								<h:outputText value="Makale Son Guncelleme" />
+							</f:facet>
+							<h:outputText value="#{u.makalesonguncelleme}" />
+					</p:column>
+		    		
+		    		<p:column>
+							<f:facet name="header">
+								<h:outputText value="Yazar Kullanici Adi" />
+							</f:facet>
+							<h:outputText value="#{u.yazarkuladi}" />
+					</p:column>
+		
+    			</p:dataTable>
+    		
+    		
+    			<h3>Nasıl Cıktı Almak İstersiniz</h3>
+					<h:commandLink>
+						<p:graphicImage value="images/excel.png" />
+						<p:dataExporter type="xls" target="tbl" fileName="list"
+							pageOnly="true" />
+					</h:commandLink>
+
+					<h:commandLink>
+						<p:graphicImage value="images/pdf.png" />
+						<p:dataExporter type="pdf" target="tbl" fileName="list"
+							pageOnly="true" />
+					</h:commandLink>
+
+					<h:commandLink>
+						<p:graphicImage value="images/csv.png" />
+						<p:dataExporter type="csv" target="tbl" fileName="list"
+							pageOnly="true" />
+					</h:commandLink>
+
+					<h:commandLink>
+						<p:graphicImage value="images/xml.png" />
+						<p:dataExporter type="xml" target="tbl" fileName="list"
+							pageOnly="true" />
+					</h:commandLink>
+    	
+				</h:form>
+				
+				<div style="clear: both" />
+				
+			</div>
+			<!-- ORTA BÖLÜM  sonu -->
+
+
+
+
+		</p:layoutUnit>
+
+
+
+
+	</p:layout>
+
+
+
+</h:body>
+</html>

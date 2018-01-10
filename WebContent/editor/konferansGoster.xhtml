@@ -1,0 +1,303 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<f:facet name="first">
+		<meta content='text/html; charset=UTF-8' http-equiv="Content-Type" />
+		<title>Editor Panel - SmartConf</title>
+	</f:facet>
+
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" />
+
+	<!-- MetisMenu CSS -->
+	<link href="css/plugins/metisMenu/metisMenu.min.css" rel="stylesheet" />
+
+	<!-- Timeline CSS -->
+	<link href="css/plugins/timeline.css" rel="stylesheet" />
+
+	<!-- Custom CSS -->
+	<link href="css/sb-admin-2.css" rel="stylesheet" />
+
+	<!-- Morris Charts CSS -->
+	<link href="css/plugins/morris.css" rel="stylesheet" />
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome-4.1.0/css/font-awesome.min.css"
+		rel="stylesheet" type="text/css" />
+
+</h:head>
+
+
+<h:body>
+
+	<p:layout fullPage="true">
+
+		<p:layoutUnit position="north" size="90" resizable="false"
+			closable="true" collapsible="true">
+
+
+			<!-- ÜST MENU BASLANGIC -->
+			<p:layout style="min-width:400px;min-height:200px;">
+
+				<p:layoutUnit position="west" resizable="true" size="245"
+					minSize="40">
+					<p:graphicImage value="/editor/images/indir.jpg"
+						style="width:245px;height:60px;" />
+				</p:layoutUnit>
+
+
+
+				<p:layoutUnit position="center">
+
+					<h:form>
+						<p:growl id="messages" />
+
+						<p:menubar style="height:45px">
+							
+							<f:facet name="options">
+								
+								<p:commandButton value="Oturumu Kapat" action="logout"
+									icon="ui-icon-extlink" />
+									
+							</f:facet>
+							
+						</p:menubar>
+						
+					</h:form>
+					
+				</p:layoutUnit>
+				
+			</p:layout>
+
+
+
+
+		</p:layoutUnit>
+
+		<!-- ÜST MENU BİTİSİ -->
+
+
+
+		<!--  	<p:layoutUnit position="south" size="100" closable="true"
+			collapsible="true">
+                    ALT
+                </p:layoutUnit>  -->
+
+		<p:layoutUnit position="west" size="250">
+			<h:form>
+				<p:growl autoUpdate="true" />
+
+				<p:panelMenu style="width:250px">
+
+
+					<p:submenu label="Menu">
+						<p:menuitem value="Anasayfa" action="homeeditor"
+							icon="ui-icon-home" />
+					</p:submenu>
+
+
+					<p:submenu label="Editor">
+						<p:menuitem value="Editor Bilgileri Göster" action="editorGoster"
+							icon="ui-icon-person" />
+					</p:submenu>
+						
+				
+				
+					<p:submenu label="Yazarlar">
+						<p:menuitem value="Yazarları Göster" action="editoryazarGoster"
+							icon="ui-icon-clipboard" />
+						
+						<p:menuitem value="Yazarları Raporla" action="editoryazarRaporla"
+							icon="ui-icon-print" />
+						
+					</p:submenu>
+
+					<p:submenu label="Hakemler">
+						<p:menuitem value="Hakemleri Göster"  action="editorhakemGoster"
+						   icon="ui-icon-clipboard" />
+						   <p:menuitem value="Hakemleri Raporla" action="editorhakemRaporla"
+						   icon="ui-icon-print" />	
+					</p:submenu>
+					
+					
+					<p:submenu label="Makaleler">
+						<p:menuitem value="Makaleleri Yönlendir"  action="editormakaleGoster"
+						   icon="ui-icon-link" />
+						<p:menuitem value="Makale Durumlari Bildir"  action="editormakaleDurum"
+						   icon="ui-icon-signal-diag" />
+						<p:menuitem value="Makaleleri Raporla" action="editormakaleRaporla"
+						   icon="ui-icon-print" />	
+					</p:submenu>
+					
+					<p:submenu label="Konferans">
+						
+						<p:menuitem value="Konferans Olustur"  action="konferansEkle"
+						   icon="ui-icon-plusthick" />
+						<p:menuitem value="Konferans Göster"  action="konferansGoster"
+						   icon="ui-icon-lightbulb" />
+						   <p:menuitem value="Konferans Raporla" action="konferansRaporla"
+						   icon="ui-icon-print" />	
+					</p:submenu>
+
+					<p:separator />
+
+					
+
+					
+
+
+				</p:panelMenu>
+			</h:form>
+
+
+
+		</p:layoutUnit>
+
+
+
+
+		<p:layoutUnit position="center">
+
+			<!-- ORTA BÖLÜM -->
+
+			<div style="height: 1100px">
+
+			
+				<h:form id="form">
+
+				
+
+
+				<p:dataTable value="#{konferansBean.getUserList()}" var="u" border="1">
+			 		
+			 		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				ID
+						</f:facet>
+		    				
+		    			<h:outputText value="#{u.konferansid}"  />
+		    			
+		    		
+		    		</p:column>
+			 		
+			 		
+		    		<p:column style="width:30px;">
+		    			<f:facet name="header">
+		    				Konferans Adi
+						</f:facet>
+		    				
+		    			<h:outputText value="#{u.konferansadi}"  />
+		    			
+		    		
+		    		</p:column>
+		 
+		 			<p:column style="width:50px;">
+		    			<f:facet name="header">
+		    				Konferans Aciklama
+						</f:facet>
+		    				
+		    			<h:outputText value="#{u.konferansaciklama}"  />
+		    			
+		    		</p:column>
+		 
+		    		<p:column style="width:50px;">
+		    			<f:facet name="header">
+		    				Konferans Konu
+						</f:facet>
+		    				
+		    				<h:outputText value="#{u.konferanskonu}"  />
+		    				
+		    		</p:column>
+		    		
+		    		<p:column style="width:50px;">
+		    			<f:facet name="header">
+		    				Konferans Yer
+						</f:facet>
+		    				
+		    				<h:outputText value="#{u.konferansyer}"  />
+		    				
+		    		</p:column>
+		    		
+		    		
+		    		<p:column style="width:20px;">
+		    			<f:facet name="header">
+		    				Baslangic Tarihi
+						</f:facet>
+		    				
+		    				<h:outputText value="#{u.konferansbaslangictarihi}"  />
+		    				
+		    		</p:column>
+		    	
+		    		
+		    		<p:column style="width:20px;">
+		    			<f:facet name="header">
+		    				Bitis Tarihi
+						</f:facet>
+		    				
+		    				<h:outputText value="#{u.konferansbitistarihi}"  />
+		    				
+		    		</p:column>
+		    		
+		    		<p:column style="width:20px;">
+		    			<f:facet name="header">
+		    				Url
+						</f:facet>
+		    				
+		    				<h:outputText value="#{u.konferansurl}"  />
+		    				
+		    		</p:column>
+		    		
+		    		
+		    		
+		    		
+		    	
+		    		
+		    		<p:column style="width:20px;">
+		    		
+		    			<f:facet name="header">
+		    				Duzenle
+		    			</f:facet>
+		    				
+		    			<p:commandButton value="Düzenle" action="#{konferans.duzenle(u.konferansid)}" />
+		    	
+		    		</p:column> 
+		    		
+		    		<p:column style="width:20px;">
+		    		
+		    			<f:facet name="header">
+		    				Sil
+		    			</f:facet>
+		    				
+		    			<p:commandButton value="Sil" update="@form" action="#{konferans.delete(u.konferansid)}">
+		    			
+		    			 <f:ajax update="@all" render="@all" />
+		    			
+		    			
+		    			</p:commandButton>
+		    	
+		    		</p:column> 
+		    		
+		    		
+		 
+    			</p:dataTable>
+    	
+				</h:form>
+				
+
+
+			</div>
+			<!-- ORTA BÖLÜM  sonu -->
+
+		</p:layoutUnit>
+
+
+	</p:layout>
+
+
+</h:body>
+</html>

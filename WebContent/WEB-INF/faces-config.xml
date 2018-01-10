@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_1.xsd"
+    version="2.1">
+
+<navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>homeeditor</from-outcome>
+            <to-view-id>/editor/home.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+</navigation-rule>
+ 
+    
+<navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>homeyazar</from-outcome>
+            <to-view-id>/yazar/home.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+<navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>homehakem</from-outcome>
+            <to-view-id>/hakem/home.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>hakemgoster</from-outcome>
+            <to-view-id>/hakem/hakemgoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+    <navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>hakemGelenMakaleGoster</from-outcome>
+            <to-view-id>/hakem/hakemgelenmakalegoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+    
+    <navigation-rule>
+ 
+    	<navigation-case>	
+            <from-outcome>editorgiris</from-outcome>
+            <to-view-id>/editor/login.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+    <navigation-rule>
+     
+    	<navigation-case>	
+            <from-outcome>hakemgiris</from-outcome>
+            <to-view-id>/hakem/login.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+    <navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>yazargiris</from-outcome>
+            <to-view-id>/yazar/login.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+     <navigation-rule>
+      
+    	<navigation-case>	
+            <from-outcome>makaleDurum</from-outcome>
+            <to-view-id>/yazar/makaleDurum.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    </navigation-rule>
+    
+    
+    
+    
+ 
+    <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>logoutyazar</from-outcome>
+            <to-view-id>index.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+         
+  </navigation-rule>
+    
+    <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>logouthakem</from-outcome>
+            <to-view-id>index.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+  </navigation-rule>
+    
+    
+    
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>logout</from-outcome>
+            <to-view-id>index.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+  </navigation-rule>
+  
+  <!-- EDİTOR KISIMI BASLANGIC -->
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editorGoster</from-outcome>
+            <to-view-id>/editor/editorGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editoryazarGoster</from-outcome>
+            <to-view-id>/editor/editoryazarGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editormakaleDurum</from-outcome>
+            <to-view-id>/editor/editormakaleDurum.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editoryazarRaporla</from-outcome>
+            <to-view-id>/editor/editoryazarRaporla.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editorhakemGoster</from-outcome>
+            <to-view-id>/editor/editorhakemGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editorhakemRaporla</from-outcome>
+            <to-view-id>/editor/editorhakemRaporla.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editormakaleGoster</from-outcome>
+            <to-view-id>/editor/editormakaleGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+    	<navigation-case>	
+            <from-outcome>editormakaleRaporla</from-outcome>
+            <to-view-id>/editor/editormakaleRaporla.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>         
+  </navigation-rule>
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>konferansGoster</from-outcome>
+            <to-view-id>/editor/konferansGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    
+  </navigation-rule>
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>konferansRaporla</from-outcome>
+            <to-view-id>/editor/konferansRaporla.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>   
+    
+  </navigation-rule>
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>konferansEkle</from-outcome>
+            <to-view-id>/editor/konferansEkle.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+  
+   <!-- EDİTOR KISIMI SONU -->
+  
+  		
+  
+  
+  
+  
+  
+  
+
+
+<navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>makaleGonder</from-outcome>
+            <to-view-id>/yazar/makaleGonder.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>makaleBilgileri</from-outcome>
+            <to-view-id>/yazar/makaleBilgileri.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>makaleGoster</from-outcome>
+            <to-view-id>/yazar/makaleGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>kullanicilariGoster</from-outcome>
+            <to-view-id>/yazar/yazarGoster.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+  
+  
+  <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>makaleStep</from-outcome>
+            <to-view-id>/yazar/makaleIslemlerim.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+  
+  
+  
+  
+  
+   <navigation-rule>
+  		
+    	<navigation-case>	
+            <from-outcome>kullanicilariRaporla</from-outcome>
+            <to-view-id>/yazar/yazarRaporla.xhtml</to-view-id>
+            <redirect />
+        </navigation-case>  
+      
+  </navigation-rule>
+
+
+
+
+
+
+
+
+
+</faces-config>
