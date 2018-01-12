@@ -2,11 +2,11 @@
 SmartConf Article Management System
 
 
-Editor Module  : 
+Editor Module  :                                                                                                                           
 ![editor](editor.gif)                                                               
-Referee Module :
+Referee Module :                                                                                                                           
 ![referee](referee.gif)                                                               
-Author Module  :
+Author Module  :                                                                                                                           
 ![author](author.gif)
                                                                
  
