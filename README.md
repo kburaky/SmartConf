@@ -1,5 +1,5 @@
 # SmartConf
-SmartConf Article Management System
+SmartConf  Article Management System
 
 
 Editor Module  :                                                                                                                           
